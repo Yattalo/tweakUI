@@ -2,6 +2,7 @@
 
 import { AIChatFormBody } from "@/components/editor/ai/ai-chat-form-body";
 import { AlertBanner } from "@/components/editor/ai/alert-banner";
+import { AgentModeToggle } from "@/components/editor/ai/agent-mode-toggle";
 import { EnhancePromptButton } from "@/components/editor/ai/enhance-prompt-button";
 import { ImageUploader } from "@/components/editor/ai/image-uploader";
 import ThemePresetSelect from "@/components/editor/theme-preset-select";
@@ -112,6 +113,7 @@ export function AIChatForm({
           </div>
 
           <div className="flex items-center gap-2">
+            <AgentModeToggle />
             {(isPro || hasFreeRequestsLeft) && promptData?.content ? (
               <EnhancePromptButton
                 isEnhancing={isEnhancingPrompt}
